@@ -7,14 +7,15 @@
  */
 void insertion_sort_list(listint_t **list)
 {
+listint_t *current, *insertion_point, *next_node;
 if (list == NULL || *list == NULL || (*list)->next == NULL)
 return;
 
-listint_t *current = (*list)->next;
+current = (*list)->next;
 while (current != NULL)
 {
-listint_t *insertion_point = current->prev;
-listint_t *next_node = current->next;
+insertion_point = current->prev;
+next_node = current->next;
 while (insertion_point != NULL && insertion_point->n > current->n)
 {
 insertion_point = insertion_point->prev;
