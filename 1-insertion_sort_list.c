@@ -7,7 +7,7 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-listint_t *current, *insertion_point, *next_node;
+listint_t *current, *insertion_point, *next_node, *last_node;
 if (list == NULL || *list == NULL || (*list)->next == NULL)
 return;
 
@@ -45,4 +45,10 @@ insertion_point->next = current;
 current = next_node;
 print_list(*list);
 }
+last_node = *list;
+while (last_node->next != NULL)
+{
+last_node = last_node->next;
+}
+print_list(last_node);
 }
