@@ -15,7 +15,7 @@ tmp = *a;
 }
 
 /**
-* selection_sort - Sort an array of integers in ascending order by selection sort algorithm.
+* selection_sort - Sort an array of int in asc order by selection sort
 * @array: An array of integers.
 * @size: The size of the array.
 * Description: Prints the array after each swap.
